@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+    <RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:context=".HanitCreation"
+        tools:showIn="@layout/activity_hanit_creation"
+
+        >
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view_habitInput"
+            style="@style/MyCardViewStyle"
+            android:layout_marginTop="70dp"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            app:cardCornerRadius="1dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                >
+
+                <EditText
+                    android:id="@+id/editText_habit"
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:hint="@string/habit"
+                    android:textAppearance="@android:style/TextAppearance.DeviceDefault.Inverse" />
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view_motivationInput"
+            style="@style/MyCardViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@+id/card_view_habitInput"
+            app:cardCornerRadius="1dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                >
+
+                <EditText
+                    android:id="@+id/editText_motivation"
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:hint="@string/motivation"
+                    android:textAppearance="@android:style/TextAppearance.DeviceDefault.Inverse" />
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view_daysInputStart"
+        style="@style/MyCardViewStyle"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/card_view_motivationInput"
+        android:layout_marginTop = "20dp"
+        app:cardCornerRadius="1dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/card_view_daysInputStart">
+
+            <TextView
+                android:id="@+id/textView_startDay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:hint="@string/start_date"
+                 />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view_daysInputEnd"
+        style="@style/MyCardViewStyle"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/card_view_daysInputStart"
+        android:layout_marginTop = "10dp"
+        app:cardCornerRadius="1dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/card_view_daysInput">
+
+            <TextView
+                android:id="@+id/textView_endDay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:hint="@string/end_date"
+                tools:text="@string/end_date" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view_Reminder"
+        style="@style/MyCardViewStyle"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/card_view_daysInputEnd"
+        android:layout_marginTop = "20dp"
+        app:cardCornerRadius="1dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:layout_below="@+id/card_view_daysInput">
+
+            <TextView
+                android:id="@+id/textView_reminder"
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:hint="@string/remainder"
+                 />
+
+            <ImageView
+                android:id="@+id/imageViewCross"
+                android:visibility="gone"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="20dp"
+                app:srcCompat="@drawable/cross" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view_reminderFrequency"
+        style="@style/MyCardViewStyle"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/card_view_Reminder"
+        android:layout_marginTop = "10dp"
+        app:cardCornerRadius="1dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <TextView
+                android:id="@+id/week_days_training"
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:text="@string/every_day" />
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/id_save_button"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/card_view_reminderFrequency"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+        android:paddingRight="20dp"
+        android:text="@string/save" />
+
+</RelativeLayout>

@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Habit">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar2"
+            style="@style/Toolbar"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:context=".Habit" >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_marginTop="70dp"
+                android:id="@+id/card_view_overallProgress"
+                style="@style/MyCardViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/card_view_daysInputStart">
+
+                <TextView
+                    style="@style/MyTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="@string/сurrent_result"/>
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/days_for_habit"
+                    android:gravity="center"/>
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_marginTop="40dp"
+                    android:layout_centerHorizontal = "true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/сurrent_success"
+                    android:gravity="center"/>
+                <TextView
+                    android:layout_marginTop="40dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_alignParentRight = "true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/days_were_done"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:id="@+id/textViewDaysForTraining"
+                    android:textColor="#0A326D"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="86dp"
+                    android:gravity="center"
+                    android:text="90" />
+
+                <TextView
+                    android:id="@+id/textViewCurrentSuccess"
+                    android:textColor="#0A326D"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="86dp"
+                    android:gravity="center"
+                    android:text="26" />
+
+                <TextView
+                    android:id="@+id/textViewDaysWasDone"
+                    android:textColor="#0A326D"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="86dp"
+                    android:layout_marginRight="40dp"
+                    android:gravity="center"
+                    android:text="42" />
+
+            </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_view_graph"
+                style="@style/MyCardViewStyle"
+                android:layout_below="@+id/card_view_overallProgress"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+                    <TextView
+                        style="@style/MyTextStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/progress"/>
+                    <com.jjoe64.graphview.GraphView
+                        android:layout_marginTop="35dp"
+                        android:id = "@+id/gv_graph"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                style="@style/MyCardViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/card_view_graph"
+                android:layout_marginTop = "20dp"
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    >
+                    <TextView
+                        style="@style/MyTextStyle"
+                        android:id="@+id/textView_history"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/history"/>
+
+                    <!--<CalendarView-->
+                        <!--android:layout_marginTop="30dp"-->
+                        <!--android:id="@+id/calendarView2"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="match_parent" />-->
+                    <com.applandeo.materialcalendarview.CalendarView
+                        android:layout_marginTop = "40dp"
+                        android:id="@+id/calendarViewFinal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+
+                        app:abbreviationsBarColor="@color/White"
+                        app:abbreviationsLabelsColor="@color/colorDarkBlue"
+                        app:daysLabelsColor="@color/BlueSystem"
+                        app:headerColor="@color/BlueSystem"
+                        app:headerLabelColor="@color/White"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:pagesColor="@color/White"
+                        app:eventsEnabled="false"
+                        app:selectionColor="@color/BlueSystem"
+                        app:selectionLabelColor="@color/White"
+                        app:anotherMonthsDaysLabelsColor="@color/White"
+                        app:todayLabelColor="#FFAA1A"
+                        app:type="many_days_picker" />
+                    />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+    </ScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
